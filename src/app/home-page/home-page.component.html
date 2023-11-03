@@ -1,0 +1,17 @@
+<div class="home-page-main">
+  <div class="user-search">
+    <div class="search-container">
+      <input type="text" [(ngModel)]="userName" placeholder="Enter a username">
+      <button (click)="getUser()">
+        <img src="/assets/images/search.png">
+      </button>
+    </div>
+  </div>
+  <div class="searched-user-container">
+    <div class="searched-user-container-left">
+      <img src="/assets/images/naruto.png">
+    </div>
+    <div class="searched-user-container-right"></div>
+  </div>
+  <div class="users-container"></div>
+</div>
