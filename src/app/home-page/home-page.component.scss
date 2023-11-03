@@ -5,7 +5,7 @@
   flex-direction: column;
   row-gap: 40px;
   padding: 30px 100px;
-  background-color: #f3f3f3;
+  background-color: #fdfdfded;
   .user-search {
     width: 100%;
     height: auto;
@@ -46,23 +46,95 @@
       }
     }
   }
-  .searched-user-container {
+  .searched-user-main {
     width: 100%;
     height: auto;
-    display: flex;
-    flex-direction: row;
-    column-gap: 40px;
-    align-items: top;
-    .searched-user-container-left {
-      width: 300px;
-      height: 300px;
+    .searched-user-gif {
+      width: 750px;
+      height: auto;
       img {
         width: 100%;
-        height: 100%;
-        object-fit: cover;
-        border-radius: 100%;
-        border: 2px solid #fff;
-        outline: 2px solid #000;
+        height: auto;
+      }
+    }
+    .searched-user-container {
+      width: 100%;
+      height: auto;
+      display: flex;
+      flex-direction: row;
+      column-gap: 80px;
+      align-items: center;
+      .searched-user-container-left {
+        display: flex;
+        flex-direction: column;
+        row-gap: 30px;
+        text-align: center;
+        position: relative;
+        .searched-user-image {
+          width: 250px;
+          height: 250px;
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 100%;
+            border: 2px solid #fff;
+            outline: 2px solid #000;
+          }
+        }
+        .searched-user-profile-url {
+          position: absolute;
+          content: '';
+          bottom: -50px;
+          left: 0;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          column-gap: 10px;
+          a {
+            text-decoration: none;
+            color: #000;
+          }
+        }
+      }
+      .searched-user-container-right {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        row-gap: 25px;
+        .searched-user-name {
+          width: 100%;
+          h3 {
+            font-size: 32px;
+          }
+        }
+        .searched-user-bio {
+          p {
+            font-size: 20px;
+          }
+        }
+        .searched-user-location {
+          display: flex;
+          align-items: center;
+          flex-direction: row;
+          column-gap: 5px;
+          p {
+            font-size: 20px;
+          }
+          img {
+            width: 22px;
+            height: 22px;
+          }
+        }
+        .searched-user-public-url {
+          p {
+            font-size: 20px;
+            a {
+              text-decoration: none;
+              color: #000;
+            }
+          }
+        }
       }
     }
   }

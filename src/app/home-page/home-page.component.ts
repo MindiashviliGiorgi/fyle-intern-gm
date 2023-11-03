@@ -12,11 +12,12 @@ export class HomePageComponent {
   littleLimitedUsers: number = 20;
   manyLimitedUsers: number = 100;
 
+  searchedUser: boolean = false;
+  searchedUserGif: boolean = false;
+
   constructor(private usersDataService : UsersDataService) {}
 
-  ngOnInit(): void {
-
-  };
+  ngOnInit(): void {};
   
   getUsers() {
     this.usersDataService.getGitHubUsers()
@@ -26,18 +27,22 @@ export class HomePageComponent {
   };
 
   getUser() {
+    this.searchedUser = false;
+    this.searchedUserGif = true;
     this.usersDataService.getUser(this.userName)
     .subscribe((user) => {
       this.userName = user;
       console.log(this.userName )
-    })
+    });
+    this.searchedUser = true;
+    setTimeout(() => {
+      this.searchedUserGif = false;
+    }, 500);
   };
 
   getLittleLimitedUsers() {
     this.usersDataService.getGitHubUsersLimeted(this.littleLimitedUsers)
     .subscribe()
   }
-
-
 
 }
