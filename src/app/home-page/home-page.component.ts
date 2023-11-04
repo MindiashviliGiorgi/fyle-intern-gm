@@ -9,18 +9,20 @@ import { UsersDataService } from '../services/users-data.service';
 export class HomePageComponent {
   usersData: any;
   userName: any;
-  littleLimitedUsers: number = 20;
-  manyLimitedUsers: number = 100;
+  itemsPerPage: number = 20;
+  usersCount: number = 200;
 
   searchedUser: boolean = false;
   searchedUserGif: boolean = false;
 
   constructor(private usersDataService : UsersDataService) {}
 
-  ngOnInit(): void {};
+  ngOnInit(): void {
+    this.getUsers()
+  };
   
   getUsers() {
-    this.usersDataService.getGitHubUsers()
+    this.usersDataService.getGitHubUsers(this.usersCount)
     .subscribe((data) => {
       this.usersData = data;
     })
@@ -32,7 +34,6 @@ export class HomePageComponent {
     this.usersDataService.getUser(this.userName)
     .subscribe((user) => {
       this.userName = user;
-      console.log(this.userName )
     });
     this.searchedUser = true;
     setTimeout(() => {
@@ -40,9 +41,12 @@ export class HomePageComponent {
     }, 500);
   };
 
-  getLittleLimitedUsers() {
-    this.usersDataService.getGitHubUsersLimeted(this.littleLimitedUsers)
-    .subscribe()
+  littleItemsPerPage() {
+    this.itemsPerPage = 20;
+  }
+
+  manyItemsPerPage(){
+    this.itemsPerPage = 100;
   }
 
 }

@@ -41,5 +41,33 @@
       </div>
     </div>
   </div>
-  <div class="users-container"></div>
+  <div class="btns">
+    <button (click)="littleItemsPerPage()">20 Item Per Page</button>
+    <button (click)="manyItemsPerPage()">100 Item Per Page</button>
+  </div>
+  <div class="users-containers-list">
+    <ng-container *ngFor="let user of usersData | paginate: { itemsPerPage : itemsPerPage, currentPage : userName}">
+      <div class="user-container">
+        <div class="user-container-left">
+          <div class="user-container-pic">
+            <img src="{{ user.avatar_url }}">
+          </div>
+        </div>
+        <div class="user-container-right">
+          <div class="user-container-name">
+            <h2>{{ user.login }}</h2>
+          </div>
+          <div class="user-container-bio">
+            <img src="/assets/images/url-icon.png">
+            <a href="{{ user.html_url }}" target="_blank">
+              {{ user.html_url }}
+            </a>
+          </div>
+        </div>
+      </div>
+    </ng-container>
+  </div>
+  <div class="pagination-system">
+      <pagination-controls (pageChange)="userName = $event"></pagination-controls>
+  </div>
 </div>
