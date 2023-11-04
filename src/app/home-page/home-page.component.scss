@@ -174,7 +174,7 @@
     grid-row-gap: 30px;
     .user-container {
       width: 100%;
-      height: 150px;
+      height: auto;
       border: 1px solid #000;
       padding: 10px 40px;
       border-radius: 4px;
@@ -229,5 +229,286 @@
     justify-content: center;
     flex-direction: row;
     column-gap: 10px;
+  }
+}
+
+@media (max-width : 1200px) {
+  .home-page-main {
+    padding: 30px 50px;
+    .users-containers-list {
+      grid-column-gap: 10px;
+      grid-row-gap: 10px;
+    }
+  }
+}
+@media (max-width : 1100px) {
+  .home-page-main {
+    padding: 30px 50px;
+    .users-containers-list {
+      grid-column-gap: 10px;
+      grid-row-gap: 10px;
+      .user-container {
+        padding: 10px;
+      }
+    }
+  }
+}
+@media (max-width : 940px) {
+  .home-page-main {
+    padding: 30px 50px;
+    .users-containers-list {
+      grid-column-gap: 10px;
+      grid-row-gap: 10px;
+      .user-container {
+        padding: 20px;
+        .user-container-left {
+          .user-container-pic {
+            img {
+              width: 70px;
+              height: 70px;
+              border: 50%;
+            }
+          }
+        }
+        .user-container-right {
+          .user-container-name {
+            h2 {
+              font-size: 18px;
+            }
+          }
+          .user-container-bio {
+            img {
+              width: 18px;
+              height: 18px;
+            }
+            a {
+              font-size: 14px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width : 900px) {
+  .home-page-main {
+    padding: 30px 50px;
+    .searched-user-main {
+      .searched-user-gif {
+        width: 100%;
+      }
+    }
+    .users-containers-list {
+      grid-template-columns: repeat(1, 1fr);
+      grid-column-gap: 20px;
+      grid-row-gap: 20px;
+      .user-container {
+        padding: 20px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        column-gap: 20px;
+        .user-container-left {
+          flex: 0;
+          .user-container-pic {
+            img {
+              width: 100px;
+              height: 100px;
+              border: 50%;
+            }
+          }
+        }
+        .user-container-right {
+          flex: 0;
+          .user-container-name {
+            h2 {
+              font-size: 23px;
+            }
+          }
+          .user-container-bio {
+            img {
+              width: 25px;
+              height: 25px;
+            }
+            a {
+              font-size: 17px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width : 620px) {
+  .home-page-main {
+    padding: 30px 50px;
+    .searched-user-main {
+      .searched-user-gif {
+        width: 100%;
+      }
+      .searched-user-container {
+        column-gap: 30px;
+        .searched-user-container-left {
+          .searched-user-image {
+            width: 150px;
+            height: 150px;
+          }
+          .searched-user-profile-url {
+            bottom: -60px;
+          }
+        }
+        .searched-user-container-right {
+          row-gap: 15px;
+          .searched-user-name {
+            h3 {
+              font-size: 25px;
+            }
+          }
+          .searched-user-bio,
+          .searched-user-location,
+          .searched-user-public-url {
+            p {
+              font-size: 17px;
+            }
+          }
+        }
+      }
+    }
+    .btns {
+      button {
+        font-size: 15px;
+      }
+    }
+    .users-containers-list {
+      grid-template-columns: repeat(1, 1fr);
+      grid-column-gap: 20px;
+      grid-row-gap: 20px;
+      .user-container {
+        padding: 20px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        column-gap: 20px;
+        .user-container-left {
+          flex: 0;
+          .user-container-pic {
+            img {
+              width: 100px;
+              height: 100px;
+              border: 50%;
+            }
+          }
+        }
+        .user-container-right {
+          flex: 0;
+          .user-container-name {
+            h2 {
+              font-size: 23px;
+            }
+          }
+          .user-container-bio {
+            img {
+              width: 25px;
+              height: 25px;
+            }
+            a {
+              font-size: 17px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width : 550px) {
+  .home-page-main {
+    padding: 30px 20px;
+    .users-containers-list {
+      grid-template-columns: repeat(1, 1fr);
+      grid-column-gap: 20px;
+      grid-row-gap: 20px;
+      .user-container {
+        padding: 10px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        column-gap: 20px;
+        .user-container-left {
+          flex: 0;
+          .user-container-pic {
+            img {
+              width: 70px;
+              height: 70px;
+              border: 50%;
+            }
+          }
+        }
+        .user-container-right {
+          flex: 0;
+          .user-container-name {
+            h2 {
+              font-size: 18px;
+            }
+          }
+          .user-container-bio {
+            img {
+              width: 18px;
+              height: 18px;
+            }
+            a {
+              font-size: 15px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width : 550px) {
+  .home-page-main {
+    padding: 30px 20px;
+    .users-containers-list {
+      grid-template-columns: repeat(1, 1fr);
+      grid-column-gap: 20px;
+      grid-row-gap: 20px;
+      .user-container {
+        padding: 5px;
+        display: flex;
+        flex-direction: row;
+        justify-content: left;
+        align-items: center;
+        column-gap: 20px;
+        .user-container-left {
+          flex: 0;
+          .user-container-pic {
+            img {
+              width: 70px;
+              height: 70px;
+              border: 50%;
+            }
+          }
+        }
+        .user-container-right {
+          flex: 0;
+          .user-container-name {
+            h2 {
+              font-size: 18px;
+            }
+          }
+          .user-container-bio {
+            img {
+              width: 18px;
+              height: 18px;
+            }
+            a {
+              font-size: 15px;
+            }
+          }
+        }
+      }
+    }
   }
 }

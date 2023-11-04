@@ -1,7 +1,7 @@
 <div class="home-page-main">
   <div class="user-search">
     <div class="search-container">
-      <input type="text" [(ngModel)]="userName" placeholder="Enter a username">
+      <input type="text" [(ngModel)]="singleUserName" placeholder="Enter a username">
       <button (click)="getUser()">
         <img src="/assets/images/search.png">
       </button>
@@ -15,34 +15,34 @@
       *ngIf="searchedUser && !searchedUserGif">
       <div class="searched-user-container-left">
         <div class="searched-user-image">
-          <img src="{{ userName.avatar_url }}">
+          <img src="{{ singleUserName.avatar_url }}">
         </div>
         <div class="searched-user-profile-url">
           <img src="/assets/images/url-icon.png">
-          <a href="{{ userName.html_url }}" target="_blank">{{ userName.html_url }}</a>
+          <a href="{{ singleUserName.html_url }}" target="_blank">{{ singleUserName.html_url }}</a>
         </div>
       </div>
       <div class="searched-user-container-right">
         <div class="searched-user-name">
-          <h3>{{ userName.name }}</h3>
+          <h3>{{ singleUserName.name }}</h3>
         </div>
         <div class="searched-user-bio">
-          <p>{{ userName.bio }}</p>
+          <p>{{ singleUserName.bio }}</p>
         </div>
         <div class="searched-user-location">
           <img src="/assets/images/location.png">
-          <p>{{ userName.location }}</p>
+          <p>{{ singleUserName.location }}</p>
         </div>
         <div class="searched-user-public-url">
           <p>
-            Twitter: <a href="userName.twitter_username" target="_blank">{{ userName.twitter_username }}</a>
+            Twitter: <a href="singleUserName.twitter_username" target="_blank">{{ singleUserName.twitter_username }}</a>
           </p>
         </div>
       </div>
     </div>
   </div>
   <div class="btns">
-    <button (click)="littleItemsPerPage()">20 Item Per Page</button>
+    <button (click)="littleItemsPerPage()">10 Item Per Page</button>
     <button (click)="manyItemsPerPage()">100 Item Per Page</button>
   </div>
   <div class="users-containers-list">

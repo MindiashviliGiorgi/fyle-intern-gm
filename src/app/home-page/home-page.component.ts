@@ -9,7 +9,8 @@ import { UsersDataService } from '../services/users-data.service';
 export class HomePageComponent {
   usersData: any;
   userName: any;
-  itemsPerPage: number = 20;
+  singleUserName: any;
+  itemsPerPage: number = 10;
   usersCount: number = 200;
 
   searchedUser: boolean = false;
@@ -31,9 +32,9 @@ export class HomePageComponent {
   getUser() {
     this.searchedUser = false;
     this.searchedUserGif = true;
-    this.usersDataService.getUser(this.userName)
+    this.usersDataService.getUser(this.singleUserName)
     .subscribe((user) => {
-      this.userName = user;
+      this.singleUserName = user;
     });
     this.searchedUser = true;
     setTimeout(() => {
@@ -42,7 +43,7 @@ export class HomePageComponent {
   };
 
   littleItemsPerPage() {
-    this.itemsPerPage = 20;
+    this.itemsPerPage = 10;
   }
 
   manyItemsPerPage(){
